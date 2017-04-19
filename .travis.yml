@@ -11,6 +11,9 @@ env:
     #    anaconda auth --create --name CI-UPLOAD --scopes "repos pypi api:read api:write"
     #- ANACONDA_CLOUD_TOKEN=...
     - secure: "VEwiVH8TRZkuEXXatW9QJxnP337Uz4p0Y/l3DP+LxNRUIETurwZBUKW8emeo9fGnJOROclvhfQ8JO/driCxw3upBGTiuUqsd+DIzBGOl36fuNXKU/MrV0BU5dg6V8R63lRSjNABFB3F8wPJVXcXRKxZKn4nTksijx5xl7h3xZ299Y44yWmnPCstjanpRlZAtbwYmKaLYTfyUEKyVxNUn7iXtT3QCBOQgu2ZORc/alOwPEpTZB/2lpPx/9Rkk2gx5X4ak7evpsrKW0Lp+sNtcO1m8QEOHbKV6feikkDcpK9YSKQa1ZipONm0cC79j+GA//vVE7D2/leiGAI+borzQuddED/oLcE8olukPA+5J5kUjxh3lRRW3HmikC4aK43lv4gGxTlbCbIskuo1OqQwiiP+vd/YFh14p0JD4KxwcDw+umlEcp93XM/UKgVP4NHO54gN53GsEi9DhTnhZZerCuFf1irM+KSQsOohdEuf+nK/DD1Yim014HK111I9iE/fnA2i15ddpYLhT3jdzrDNBELT5IqcXMfoy4ChZQDevGDKHVR5nqBY2oQnoAA7qJrO92697nmz2rZA7ZW1o7WWUsBQh9Ne6PV3/FuvBCbDLrT/gVS/tU0j+y96LZRaAw6PhQig6eqkJUCdq9YJQY8M2Fjx4PFt1Q0EZiHsLajD4jbA="
+    #- PYPI_TOKEN=...
+    - secure: "UxkF8DsFrVIxdApzEgDwVhN2P/0QMG2YtXyHCOa8EbooNaI0QMwMMzltSMUkNv5AlomtGBDpKO0vnqCTVDamPjW0ZqotERWW8qtX0pNgcojnYFg8Ry7hjQg3D5gQ53zLAikxkp85lbRnB9VQyGkYZp7l4EAc3CIhFr0+AkzUYi+qTeeBkyJOPuiZXUbCR5ulD0+8zsSk9+6JjHUzcPfUTwJtgIboqDNya97PQ451o686QgLqqrwuR/7Apst3A0ucL8DMCEkOTlBQj0yOsvOyCNYg0FVBPQq6rXn7b76DvSDB+dQkxghYZdOxBWpcX2MXIbcIDLIHuMsqqzC4K5IM7BsPOO97BeflReRDv1jFY4Q/io2SU9dY47D695Nk3Ec6rBZ5ta055Fo6LoUwi0m+Ggi7cQ3gc2liCQ3OaY+jEcQ7W74Kk7D+QkvcN6q9ntaDFnIIZNtI4Ibspo8MpGi//XRUsXXbKBpEHffK9LLSA8qZ4hFj+ghpDJ3WyG8c2qSJLME4sCMmxHoDRNPhiSAaVMZcx3aBI1ql43DPCokRcY62gEBFZ40mIfHNvaTzYceENEsRavzhfAUTKUX3We+qS6opmrOLQVSPR3+i/MPC5SyrFH5fgyeIYrZKuqNfsyc2cSOcrQMeT5KNMT3TW6M4S/hSFskNEKljV72iWVvkP88="
+
 
 
     - STAGING_INDEX=https://pypi.anaconda.org/ales-erjavec/simple/
@@ -55,5 +58,5 @@ script:
   - python -c "import Orange.data, Orange.classification, Orange.regression, Orange.clustering"
 
 after_success:
-  - pip install -q anaconda-client
-  - anaconda --token $ANACONDA_CLOUD_TOKEN upload --no-progress --label staging --force dist/*.whl
+  - pip install twine
+  - twine upload -u anze.staric -p $PYPI_TOKEN dist/*.whl
