@@ -10,7 +10,8 @@ env:
     # Token generated using:
     #    anaconda auth --create --name CI-UPLOAD --scopes "repos pypi api:read api:write"
     #- ANACONDA_CLOUD_TOKEN=...
-    - secure: "gemWxCdrYHNO+fiZc97a9Gr6hNfUbMAWYfA9jmnjW70l0dsAywDsI/Hw0gxoqPeqVUQfY65Qxyx5GlacLdyZiNGZ7+avJWefbMILxL1kzN/jBd1is2Cm/wZ2Rc51p8rpfbgo+tB4W6EAb9ZjnJNlJXH+CFBOD9j5vLTr989wBFNDvlG211txDHeAwTp/jezkMO0IYci8X62pFbQEMysIamtrNbgLPDJOXNCZ6HA96uNxaT3XbFpNcizeLVTW1rlcKO8zr7ij36p8Zq77R35rqHxF1ZxtWvT4H5jzEAVH7CSMcHjxTFyzT7hmozifLetR1ZrnMDSx65kiF9xFACkZI7nEkh+PgaBUOh/11mALskey2zqm1g+g9520peP3p7EH1vlU2HBVeMZvU3iQANS7mQfeGlerLKIOrrPKmMmhUPybfpTapAYCKS+Uh8dbfnj9Fnqqzj4kckbTxmADzrwgX9UAjsQ+VS+0yyqbNDu8yXvcpwWt2wyeNGkci4twjXfGPIPZuV22ckheCMC1241+E/7aEoBDfMlM4lEmfhd1Jb/Onpar52fVgFwbvGXqn3RWFJ7Y7s2dyvIkJxGv4LrnJYYq3+DV1JeVD+2f9Uo/vcl2JfHDwu54vchiNMp2PQdfid2lU4uvQ2iLfoUglK5QrT8LANML2xycRBudSt/qCio="
+    - secure: "VEwiVH8TRZkuEXXatW9QJxnP337Uz4p0Y/l3DP+LxNRUIETurwZBUKW8emeo9fGnJOROclvhfQ8JO/driCxw3upBGTiuUqsd+DIzBGOl36fuNXKU/MrV0BU5dg6V8R63lRSjNABFB3F8wPJVXcXRKxZKn4nTksijx5xl7h3xZ299Y44yWmnPCstjanpRlZAtbwYmKaLYTfyUEKyVxNUn7iXtT3QCBOQgu2ZORc/alOwPEpTZB/2lpPx/9Rkk2gx5X4ak7evpsrKW0Lp+sNtcO1m8QEOHbKV6feikkDcpK9YSKQa1ZipONm0cC79j+GA//vVE7D2/leiGAI+borzQuddED/oLcE8olukPA+5J5kUjxh3lRRW3HmikC4aK43lv4gGxTlbCbIskuo1OqQwiiP+vd/YFh14p0JD4KxwcDw+umlEcp93XM/UKgVP4NHO54gN53GsEi9DhTnhZZerCuFf1irM+KSQsOohdEuf+nK/DD1Yim014HK111I9iE/fnA2i15ddpYLhT3jdzrDNBELT5IqcXMfoy4ChZQDevGDKHVR5nqBY2oQnoAA7qJrO92697nmz2rZA7ZW1o7WWUsBQh9Ne6PV3/FuvBCbDLrT/gVS/tU0j+y96LZRaAw6PhQig6eqkJUCdq9YJQY8M2Fjx4PFt1Q0EZiHsLajD4jbA="
+
 
     - STAGING_INDEX=https://pypi.anaconda.org/ales-erjavec/simple/
 
